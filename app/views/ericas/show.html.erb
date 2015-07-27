@@ -1,0 +1,28 @@
+<h1>For when Erica is being <%= @erica.name%>: </h1>
+
+<p>Erica is feeling <%= @erica.description %></p>
+<p>Her sexiness level is at  <%= @erica.sexiness %></p>
+<p>Her objective at this moment is <%= @erica.objective %></p>
+
+<hr><br>
+
+
+<p>
+	<% @boys.each do |boy| %>
+		<p><%= link_to boy.name, erica_boy_path(@erica, boy) %></p>
+		<p><%= link_to "Edit", edit_erica_boy_path(@erica, boy)%></p>
+		<p><%= link_to 'Delete', edit_erica_boy_path(@erica, boy), 
+		method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+	<% end %>
+
+</p>
+
+
+<hr><br>
+
+
+<p><%= link_to "Back to Erica Situations", ericas_path %></p>
+
+<p><%= link_to "Edit", edit_erica_path(@erica) %></p>
+
+<%= link_to "Add new observed companion to Erica situation", new_erica_boy_path(@erica)%>

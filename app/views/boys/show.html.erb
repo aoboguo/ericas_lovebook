@@ -1,0 +1,17 @@
+<h1><%= @boy.name %></h1>
+<p>Description: <%= @boy.description %></p>
+<p>Pros: <%= @boy.pros %></p>
+<p>Cons: <%= @boy.cons %></p>
+<p>Level of Adequacy: <%= @boy.level_of_adequacy %></p>
+
+<h2>erica: <%= @erica.name %></h2>
+<div class = "text-center">
+<br>
+<%= link_to "Edit", edit_erica_boy_path(@erica, @boy) %>
+<br>
+<%= link_to "All Companions", erica_boys_path %>
+<br>
+<%= link_to 'Delete', erica_boy_path(@erica, @boy), 
+method: :delete, data: { confirm: 'Are you sure?' } %> </p>
+
+</div>

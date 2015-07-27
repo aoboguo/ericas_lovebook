@@ -1,0 +1,30 @@
+<%= form_for([@erica, @erica.boys.build]) do |f| %>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p>
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+	</p>
+
+	<p>
+		<%= f.label :pros %><br>
+		<%= f.text_area :pros %>
+	</p>
+
+	<p>
+		<%= f.label :cons %><br>
+		<%= f.text_area :cons %>
+	</p>
+
+	<p>
+		<%= f.label :level_of_adequacy %><br>
+		<%= f.text_field :level_of_adequacy %>
+	</p>
+
+	<p>
+    	<%= f.submit %>
+    </p>
+<% end %>

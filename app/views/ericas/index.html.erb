@@ -1,0 +1,30 @@
+<h1>Erica's Lovebook</h1>
+
+<h2>The sexual rolodex of the modern renaissance woman</h2>
+
+<p>What is the one thing that Erica needs most right now? A log of her romantic suitors and/or other notable life partners, categorized by her situation and mood, published to the internet. With her bright college years behind her, Erica no longer has adequate time to experiment with different potential companions before finding the suitable fit for her mood and situation. Keeping track of her past interactions will allow her to be more informed about her choices in the future.</p>
+
+<p>This application also includes the ability to crowd-source even more suitable companions through suggestion boxes.</p>
+
+<%= link_to 'New Erica Observation', new_erica_path %>
+
+<table>
+	<th>Choose an Erica Mood/Situation:</th>
+
+	<% @ericas.each do |erica| %>
+		<tr>
+			<td><%= erica.name %></td>
+			<td><%= link_to 'Show', erica_path(erica) %></td>
+			<td><%= link_to 'Edit', edit_erica_path(erica) %></td>
+			<td><%= link_to 'Delete', erica_path(erica),
+				method: :delete,
+				data: { confirm: 'Are you sure?'} %></td>
+
+		</tr>
+	<% end %>
+
+	<br>
+	<%= link_to "Make a new Erica mood/situation entry", new_erica_path %>
+<table>
+
+<img src="http://i.imgur.com/l4V0Z8D.jpg">

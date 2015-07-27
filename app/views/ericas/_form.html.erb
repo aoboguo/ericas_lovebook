@@ -1,0 +1,42 @@
+<%= form_for(@erica) do |f| %>
+
+
+<% if @erica.errors.any? %>
+	<div id="error_explanation"> 
+		<h2>
+			<%= pluralize(@erica.errors.count, "error") %>
+			prohibited this Erica observation from being saved:
+		</h2>
+		<ul>
+			<% @erica.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+		</ul>
+	 </div>
+	<% end %>
+
+	<p> 
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+
+	<p> 
+		<%= f.label :description %><br>
+		<%= f.text_area :description %>
+	</p>
+
+	<p> 
+		<%= f.label :objective %><br>
+		<%= f.select :objective, ["DFMO", "Oh, Mr. Darcy!", "I just came to say hello"] %>
+	</p>
+
+	<p> 
+		<%= f.label :sexiness %><br>
+		<%= f.text_field :sexiness %>
+	</p>
+
+	<p> 
+		<%= f.submit %><br>
+	</p>
+
+	<% end %>

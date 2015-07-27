@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  pros: MyString
+  cons: MyString
+  level_of_adequacy: 1
+
+two:
+  name: MyString
+  description: MyString
+  pros: MyString
+  cons: MyString
+  level_of_adequacy: 1

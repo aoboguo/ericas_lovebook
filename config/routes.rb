@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  root "ericas#index"
+
+  resources :ericas do
+    resources :boys
+  end 
+
+  resources :boys do
+    resources :ericas
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
